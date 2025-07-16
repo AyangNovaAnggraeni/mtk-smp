@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soal Garis Bilangan</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .input-box {
+      width: 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .number-line {
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Lengkapi Garis Bilangan Berikut!</h2>
+  <div class="number-line">
+    0 — 2 —
+    <input type="text" class="input-box" id="box1"> —
+    <input type="text" class="input-box" id="box2"> — 5 —
+    <input type="text" class="input-box" id="box3"> — 7 — 8 —
+    <input type="text" class="input-box" id="box4">
+  </div>
+
+  <button onclick="cekJawaban()">Cek Jawaban</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cekJawaban() {
+      const jawaban = {
+        box1: "3",
+        box2: "4",
+        box3: "6",
+        box4: "9"
+      };
+
+      let benar = 0;
+      for (let id in jawaban) {
+        const input = document.getElementById(id).value.trim();
+        if (input === jawaban[id]) {
+          benar++;
+        }
+      }
+
+      const hasil = document.getElementById("hasil");
+      if (benar === 4) {
+        hasil.textContent = "✅ Semua jawaban benar!";
+        hasil.style.color = "green";
+      } else {
+        hasil.textContent = `❌ ${4 - benar} jawaban salah. Coba lagi!`;
+        hasil.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
