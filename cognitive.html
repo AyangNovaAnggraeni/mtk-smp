@@ -1,61 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Interactive Worksheet</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="script" href="js/script.js">
-  
+  <style>
+    body {
+      background-color: #f0f8ff;
+    }
+    .card {
+      margin-top: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-
+</script>
 <div class="container">
   <div class="text-center mt-5">
-    <h2 class="fw-bold">🧠Assessment Diagnostic Cognitive</h2>
+    <h2 class="fw-bold">🧠Assessment Diagnostic Test</h2>
     <p class="text-muted">An interactive worksheet by IIS WIDIA PUSPITAWATI, S.Pd.</p>
   </div>
-
   <div class="link-buttons">
-    <a href="index.html">Kembali</a>
+  <a href="javascript:history.back()">🔙 Kembali</a>
+  <style>
+    .link-buttons {
+        display: flex;
+        justify-content: left;
+        margin-bottom: 20px;
+    }
+  .link-buttons a {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .link-buttons a:hover {
+    background-color: #e0a800;
+  }
+</style>
   </div>
 
   <p>
-    <a class="btn btn-info" data-bs-toggle="collapse" href="#petunjukCollapse" role="button" aria-expanded="false" aria-controls="petunjukCollapse">
-      📌 Petunjuk Pengerjaan
-    </a>
-  </p>
-
-  <div class="collapse" id="petunjukCollapse">
-    <div class="card card-body" >
-      <p><strong>Langkah-langkah:</strong></p>
-      <ul>
-        <li>Tunggu hingga lembar kerja termuat sempurna.</li>
-        <li>Jawab semua soal, lalu klik tombol <strong>"Selesai"</strong>.</li>
-        <li>Jangan muat ulang (refresh) halaman saat mengerjakan.</li>
-      </ul>
-      <p>Contoh tampilan tombol "Selesai":</p>
-      <img src="image.png" alt="Contoh tombol selesai" class="img-fluid rounded border example-img">
-    </div>
+  <a class="btn btn-info" data-bs-toggle="collapse" href="#petunjukCollapse" role="button" aria-expanded="false" aria-controls="petunjukCollapse">
+    📌 Petunjuk Pengerjaan
+  </a>
+</p>
+<div class="collapse" id="petunjukCollapse">
+  <div class="card card-body" style="background-color: #fffacc;">
+    <p><strong>Langkah-langkah:</strong></p>
+    <ul>
+      <li>Tunggu hingga lembar kerja termuat sempurna.</li>
+      <li>Jawab semua soal, lalu klik tombol <strong>"Selesai"</strong>.</li>
+      <li>Jangan muat ulang (refresh) halaman saat mengerjakan.</li>
+    </ul>
+    <p>Contoh tampilan tombol "Selesai":</p>
+    <img src="image.png" alt="Contoh tombol selesai" style="max-width: 100%; width: 400px; height: auto;" class="img-fluid rounded border">
   </div>
+</div>
+
 
   <div class="card">
     <div class="card-body">
-     <div id="liveworksheet8184919" style="width:100%;">
-      <span id="lwslink8184919">
-        <a href="https://www.liveworksheets.com">Assessment Diagnostic Cognitive</a>, an interactive worksheet by <a href="https://www.liveworksheets.com/u/iis-widia-puspitawati">IIS WIDIA PUSPITAWATI</a>
-        <br><a href="https://www.liveworksheets.com">live<b>worksheets.com</b></a>
-      </span>
-    </div>
-    <script src="https://www.liveworksheets.com/embed/embed-link.js?v=1"></script>
-    <script>
-      loadliveworksheetEmbed(8184919, 'wrhw', 7290, 'www', 'new', 'https://www.liveworksheets.com/embed/c?a=s&t=zNoyx4fWFL&sr=n&l=wr&i=ouocnun&r=hw&f=dzdfzsun&ms=uu&cd=pg-jim9e---lusjxjklxlwungnegpxlxx&mw=hs');
-    </script>
+
+      <!-- Embed container (just leave it visible) -->
+      <div id="liveworksheet8184919" style="width:100%;">
+        <span id="lwslink8184919" class="text-muted small">
+          <a href="https://www.liveworksheets.com">Assessment Diagnostic Cognitive</a>,
+          an interactive worksheet by
+          <a href="https://www.liveworksheets.com/u/iis-widia-puspitawati">IIS WIDIA PUSPITAWATI</a><br>
+          <a href="https://www.liveworksheets.com">live<b>worksheets.com</b></a>
+        </span>
+      </div>
+
+      <!-- Embed Script -->
+      <script src="https://www.liveworksheets.com/embed/embed-link.js?v=1"></script>
+      <script>
+        loadliveworksheetEmbed(
+          8184919, 'wrhw', 7290, 'www', 'new',
+          'https://www.liveworksheets.com/embed/c?a=s&t=zNoyx4fWFL&sr=n&l=wr&i=ouocnun&r=hw&f=dzdfzsun&ms=uu&cd=pg-jim9e---lusjxjklxlwungnegpxlxx&mw=hs'
+        );
+      </script>
+
     </div>
   </div>
 </div>
@@ -63,11 +102,21 @@
 <!-- Back to Top Button -->
 <button id="backToTop" class="btn btn-primary rounded-circle">↑</button>
 
+<!-- Scroll & Back to Top -->
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom JS -->
-<script src="script.js"></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </body>
 </html>
